@@ -30,10 +30,14 @@ Selecao-FESF-SUS-1-FC/
 │   ├── requirements.txt
 │   └── pacientes.db
 │
-└── frontend/
-    ├── pages/
-    ├── package.json
-    └── ...
+├── frontend/
+│   ├── pages/
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── .gitignore
+└── README.md
 ```
 
 ## Funcionalidades
