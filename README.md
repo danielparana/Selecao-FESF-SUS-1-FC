@@ -1,12 +1,12 @@
-# Selecao-FESF-SUS-1-FC
+# Seleção FESF-SUS – 1 F.C
 
-Sistema simples para cadastro e consulta de pacientes desenvolvido com FastAPI no backend e Next.js no frontend.
+Projeto desenvolvido como parte do processo seletivo da FESF-SUS, contemplando uma API REST em Python utilizando FastAPI e uma interface web desenvolvida com React/Next.js.
 
 ## Tecnologias Utilizadas
 
 ### Backend
 
-* Python
+* Python 3.10+
 * FastAPI
 * SQLAlchemy
 * SQLite
@@ -14,40 +14,42 @@ Sistema simples para cadastro e consulta de pacientes desenvolvido com FastAPI n
 
 ### Frontend
 
-* React
 * Next.js
-
----
-
-## Funcionalidades
-
-* Cadastro de pacientes
-* Listagem de pacientes
-* Integração entre frontend e backend
-* Persistência dos dados utilizando SQLite
-
----
+* React
+* JavaScript
 
 ## Estrutura do Projeto
 
 ```text
-projeto/
-│
+Selecao-FESF-SUS-1-FC/
 ├── backend/
 │   ├── main.py
 │   ├── database.py
 │   ├── models.py
 │   ├── schemas.py
+│   ├── requirements.txt
 │   └── pacientes.db
 │
 └── frontend/
     ├── pages/
-    │   └── index.js
     ├── package.json
     └── ...
 ```
 
----
+## Funcionalidades
+
+* Cadastro de pacientes
+* Listagem de pacientes
+* Integração entre Frontend e API
+* Persistência de dados utilizando SQLite
+
+## Pré-requisitos
+
+Antes de executar o projeto, certifique-se de possuir instalado:
+
+* Python 3.10 ou superior
+* Node.js 18 ou superior
+* npm
 
 ## Como Executar o Backend
 
@@ -60,32 +62,30 @@ cd backend
 Instale as dependências:
 
 ```bash
-pip install fastapi uvicorn sqlalchemy
+pip install -r requirements.txt
 ```
 
-Execute a aplicação:
+Inicie a aplicação:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-A API ficará disponível em:
+A API estará disponível em:
 
 ```text
 http://localhost:8000
 ```
 
-Documentação Swagger:
+Documentação automática (Swagger):
 
 ```text
 http://localhost:8000/docs
 ```
 
----
-
 ## Como Executar o Frontend
 
-Acesse a pasta do frontend:
+Abra um novo terminal e acesse a pasta do frontend:
 
 ```bash
 cd frontend
@@ -103,47 +103,31 @@ Execute o projeto:
 npm run dev
 ```
 
-O sistema ficará disponível em:
+O frontend estará disponível em:
 
 ```text
 http://localhost:3000
 ```
 
----
-
-## Endpoints da API
-
-### Listar pacientes
-
-```http
-GET /pacientes
-```
-
-### Cadastrar paciente
-
-```http
-POST /pacientes
-```
-
-Exemplo de corpo da requisição:
-
-```json
-{
-  "nome": "Daniel",
-  "cpf": "07173240522",
-  "telefone": "71999999999",
-  "data_nascimento": "2000-01-01"
-}
-```
-
----
-
 ## Banco de Dados
 
-O sistema utiliza SQLite para armazenamento dos dados.
+O projeto utiliza SQLite para armazenamento dos dados.
 
-O arquivo do banco é criado automaticamente:
+Caso o arquivo do banco de dados não exista, ele será criado automaticamente na primeira execução da aplicação.
 
-```text
-pacientes.db
+## Integração
+
+O frontend consome os dados disponibilizados pela API FastAPI através dos endpoints implementados no backend.
+
+## Repositório
+
+Este repositório foi desenvolvido para comprovação de conhecimento em:
+
+* Desenvolvimento de API REST com FastAPI
+* Desenvolvimento Frontend com React/Next.js
+* Integração entre Frontend e Backend
+* Manipulação de banco de dados com SQLAlchemy e SQLite
+* Controle de versão com Git e GitHub
+
+```
 ```
