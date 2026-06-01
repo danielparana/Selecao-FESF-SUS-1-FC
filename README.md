@@ -129,5 +129,3 @@ Este repositório foi desenvolvido para comprovação de conhecimento em:
 * Manipulação de banco de dados com SQLAlchemy e SQLite
 * Controle de versão com Git e GitHub
 
-```
-```
