@@ -1,4 +1,4 @@
-# Sistema de Pacientes
+# Selecao-FESF-SUS-1-FC
 
 Sistema simples para cadastro e consulta de pacientes desenvolvido com FastAPI no backend e Next.js no frontend.
 
